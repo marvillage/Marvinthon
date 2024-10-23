@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="7021911_Technology_Information_1920x1080.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                
+                <label for="user-type">User Type:</label>
+                <select id="user-type" name="user-type">
+                    <option value="viewer">Viewer</option>
+                    <option value="admin">Admin</option>
+                    <option value="super-admin">Super Admin</option>
+                </select>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>
